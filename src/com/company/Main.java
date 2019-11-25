@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Scanner input = new Scanner(System.in);
-        String name;   char sex;   double score;   int numberOfstudent , index , menu;
+        int numberOfstudent , menu , index;
 
 
 
@@ -18,7 +18,7 @@ public class Main {
 
         while (true) {
             System.out.println("Menu");
-            System.out.println("1 : Insert");
+            System.out.println("1 : Add Student");
             System.out.println("2 : Display list");
             System.out.print("Input menu : ");
             menu = input.nextInt();
@@ -27,14 +27,7 @@ public class Main {
                 case 1:
                     System.out.print("Which index would you want to enroll : ");
                     index = input.nextInt();
-                    System.out.print("Student name : ");
-                    input.nextLine();
-                    name = input.nextLine();
-                    System.out.print("sex : ");
-                    sex = input.next().charAt(0);
-                    System.out.print("score : ");
-                    score = input.nextDouble();
-                    studentlist.insert(name, sex, score, index);
+                    studentlist.addStudent(index);
                     break;
                 case 2:
                     studentlist.list();
