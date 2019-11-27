@@ -72,6 +72,7 @@ public class StudentCollection {
                 continue;
             }
             else {
+                System.out.println("====================");
                 System.out.println("Number of student: " + i);
                 System.out.println("Name: " + students[i].getName());
                 System.out.println("Sex: " + students[i].getSex());
